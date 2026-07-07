@@ -1,16 +1,14 @@
-const btn = document.getElementById("loginBtn");
-const message = document.getElementById("message");
+const loginBtn = document.getElementById("loginBtn");
 
-btn.addEventListener("click", () => {
+loginBtn.onclick = function () {
 
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
-    if(user === "" || pass === ""){
-        message.textContent = "Remplis tous les champs.";
-        return;
+    if (username === "admin" && password === "1234") {
+        document.getElementById("message").innerHTML = "Connexion réussie !";
+        window.location.href = "games.html";
+    } else {
+        document.getElementById("message").innerHTML = "Identifiants incorrects";
     }
-
-    message.style.color = "#f5f5f5";
-    message.textContent = "Connexion réussie !";
-});
+};
