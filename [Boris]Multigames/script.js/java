@@ -1,6 +1,4 @@
-const loginBtn = document.getElementById("loginBtn");
-
-loginBtn.onclick = function () {
+document.getElementById("loginBtn").onclick = function () {
 
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
@@ -8,7 +6,9 @@ loginBtn.onclick = function () {
     if (username === "admin" && password === "1234") {
         document.getElementById("message").innerHTML = "Connexion réussie !";
         window.location.href = "games.html";
-    } else {
-        document.getElementById("message").innerHTML = "Identifiants incorrects";
+    } 
+    else {
+        document.getElementById("message").innerHTML = "Mauvais identifiants";
     }
+
 };
